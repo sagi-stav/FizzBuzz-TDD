@@ -1,14 +1,18 @@
 import junit.framework.TestCase;
+/*
+Equivalence Classes: Tests for inputs that return Fizz, Buzz, FizzBuzz, and regular numbers.
+Edge Cases: Inputs like 1, 15, 100, and invalid inputs such as 0 and 101.
+Specific Requirement: Each result is separated by a comma, with no trailing comma at the end.
 
-//מחלקות שקילות: בדיקות לקלטים שמחזירים Fizz, Buzz, FizzBuzz, ומספר רגיל.
-//מקרי קצה: קלטים 1, 15, 100, קלטים לא חוקיים כמו 0 ו-101.
-//דרישה ספציפית: כל תוצאה מופרדת בפסיק, ללא פסיק מיותר בסוף.
-
+The difference is in the way he tests: I check the final result, while he checks each number individually.
+*/
 public class FizzBuzzTest extends TestCase {
+
     FizzBuzz fb = new FizzBuzz();
 
     public void testFizzBuzz() {
-        String expected = "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz," + "16,17,Fizz,19,Buzz";
+        String expected = "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,"
+                + "16,17,Fizz,19,Buzz";
         assertEquals(expected, fb.print(20));
     }
 
